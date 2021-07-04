@@ -14,4 +14,8 @@ class BookingsController < ApplicationController
       render json: { errors: Booking.errors.full_messages }, status: :bad_request
     end
   end
+  def index
+    booking = current_user.bookings
+    render json: 
+  end
 end
